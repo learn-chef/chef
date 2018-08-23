@@ -1,0 +1,4 @@
+Host *
+  IdentityFile /root/.ssh/try-chef.key
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null

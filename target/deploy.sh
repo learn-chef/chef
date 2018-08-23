@@ -1,2 +1,2 @@
 #!/bin/bash
-docker push $1/inspec_target
+docker push $1/chef_target
