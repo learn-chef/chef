@@ -2,7 +2,7 @@ version: '3'
 services:
   workstation:
     container_name: workstation
-    image: learn-chef/chef_workstation
+    image: learnchef/chef_workstation
     stdin_open: true
     tty: true
     links:
@@ -10,19 +10,19 @@ services:
       - web1
       - web2
   lb:
-    image: learn-chef/chef_target
+    image: learnchef/chef_target
     stdin_open: true
     tty: true
     ports:
       - 8000:80
   web1:
-    image: learn-chef/chef_target
+    image: learnchef/chef_target
     stdin_open: true
     tty: true
     ports:
       - 8001:80
   web2:
-    image: learn-chef/chef_target
+    image: learnchef/chef_target
     stdin_open: true
     tty: true
     ports:
