@@ -9,8 +9,6 @@ services:
       - lb
       - web1
       - web2
-    volumes:
-      - .:/root
   lb:
     image: learn-chef/chef_target
     stdin_open: true
