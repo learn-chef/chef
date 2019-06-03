@@ -6,8 +6,11 @@
 apt_update
 package 'haproxy'
 
-template '/etc/haproxy.cfg' do
+directory '/etc/haproxy'
+
+template '/etc/haproxy/haproxy.cfg' do
     source 'haproxy.cfg.erb'
+    notifies :restart, 'service[haproxy]'
 end
 
 service 'haproxy' do
